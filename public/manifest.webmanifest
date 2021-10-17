@@ -1,0 +1,19 @@
+{
+  "name": "Dot Chat",
+  "short_name": "name",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
+  "description": "A new chat platform for the new era.",
+  "icons": [
+    {
+      "src": "/Icons/icon-192.png",
+      "type": "image/png", "sizes": "192x192"
+    },
+    {
+      "src": "/Icons/icon-512.png",
+      "type": "image/png", "sizes": "512x512"
+    }
+  ]
+}
