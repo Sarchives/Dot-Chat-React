@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import GuildsList from './Components/GuildsList';
 import ChannelsList from './Components/ChannelsList';
-import MembersList from './Components/MembersList';
 import Messages from './Components/Messages';
+import MessageBox from './Components/MessageBox';
 import Dashboard from './Components/Dashboard';
 
 const domain = 'http://localhost:3001';
@@ -47,8 +47,10 @@ function App() {
     {guild ? (
       <>
     <ChannelsList domain={domain} guild={guild} channel={channel} setChannel={setChannel}></ChannelsList>
-    {channel ? <Messages domain={domain} guild={guild} channel={channel}></Messages> : <div>Placeholder</div>}
-    <MembersList domain={domain} guild={guild}></MembersList>
+    {channel ? <>
+    <Messages domain={domain} guild={guild} channel={channel}></Messages>
+    <MessageBox domain={domain} guild={guild} channel={channel}></MessageBox>
+    </> : null}
     </>
     ) : <Dashboard></Dashboard>}
 </div>

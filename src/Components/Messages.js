@@ -16,7 +16,7 @@ function Messages(props) {
       )
     }, [props.channel]);
 
-   return (<div className="messages">{messages.map(message => <div className="bubbleContainer" key={message.id}><img src={'http://localhost:3000/icons/' + message.author.id + '/.png'} alt="Profile picture" className="bubblePfp"></img><div className="postPfp"><h4 className="bubbleUsername">{message.author.nickname ?? message.author.username}</h4><h5 className="bubble">{message.content}</h5></div></div>)}</div>);
+   return (<div className="messages">{messages.map(message => <div className="bubbleContainer" key={message.id}><img src={'http://localhost:3000/icons/' + message.author.id + '/.png'} alt={message.author.username} className="bubblePfp"></img><div className="postPfp"><h4 className="bubbleUsername">{message.author.nickname ?? message.author.username}</h4><h5 className="bubble">{message.content}</h5></div></div>)}</div>);
 }
 
 export default Messages;
