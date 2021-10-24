@@ -6,14 +6,14 @@
 
 @font-face {
     font-family: 'FluentSystemIcons-Filled';
-    src: url('./Fonts/FluentSystemIcons-Filled.ttf');
+    src: url('./fonts/FluentSystemIcons-Filled.ttf');
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.container {
+#root {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -22,13 +22,13 @@ body {
 .guildsList {
     width: 80px;
     height: 100%;
-    background: #F7F8FA;
+    background: #E3E5E7;
     overflow-y: auto;
     display: inline-block
 }
 
 .guildsListButtons {
-    background: #ACACAC;
+    background: #0C71FF;
     color: white;
     font-size: 20px;
     width: 40px;
@@ -54,7 +54,7 @@ body {
 }
 
 .guildsListSpecialButton {
-    background: #0084FF;
+    background: #7EC040;
 }
 
 .guildsListFirstButton { 
@@ -85,4 +85,70 @@ body {
     display: inline-block;
     position: absolute;
     width: calc(100% - 80px);
+    height: 100%;
+}
+
+.channelsList {
+    width: 200px;
+    height: 100%;
+    background: #EEF3FB;
+}
+
+.channel {
+    background: #EEF3FB;
+    border: none;
+    width: calc(100% - 10px);
+    height: 25px;
+    text-align: left;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.channel:disabled {
+    background: LightGray;
+    color: black;
+}
+
+.messages {
+    position: absolute;
+    top: 0;
+    left: 200px; 
+}
+
+.bubbleContainer {
+    margin-top: 25px;
+}
+
+.bubblePfp {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    position: absolute;
+    margin-top: -5px;
+    left: 10px;
+}
+
+.postPfp {
+    margin-left: 50px;
+}
+
+.bubbleUsername {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.bubble {
+    background: #007BFF;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: normal;
+}
+
+.membersList {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
 }
