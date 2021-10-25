@@ -5,12 +5,22 @@
 }
 
 @font-face {
+    font-family: 'Work Sans';
+    src: url('./fonts/WorkSans-VariableFont_wght.ttf');
+}
+
+@font-face {
     font-family: 'FluentSystemIcons-Filled';
     src: url('./fonts/FluentSystemIcons-Filled.ttf');
 }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+@font-face {
+    font-family: 'FluentSystemIcons-Regular';
+    src: url('./fonts/FluentSystemIcons-Regular.ttf');
+}
+
+* {
+    font-family: 'Work Sans';
 }
 
 #root {
@@ -23,7 +33,7 @@ body {
 .guildsList {
     width: 80px;
     height: 100%;
-    background: #E3E5E7;
+    background: #F7F8FA;
     overflow-y: auto;
     display: inline-block
 }
@@ -77,6 +87,10 @@ body {
     font-family: 'FluentSystemIcons-Filled';
 }
 
+.fluentIconBorder {
+    font-family: 'FluentSystemIcons-Regular';
+}
+
 .guildIcon {
     width: 100%;
     height: 100%;
@@ -93,6 +107,7 @@ body {
     width: 200px;
     height: 100%;
     background: #EEF3FB;
+    overflow-y: auto;
 }
 
 .channel {
@@ -111,12 +126,20 @@ body {
     color: black;
 }
 
+.messagesScroll {
+    position: absolute;
+    overflow-y: auto;
+    top: 0;
+    left: 200px;
+    width: calc(100% - 200px);
+    height: 100%;
+}
+
 .messages {
     position: absolute;
     top: 0;
-    left: 200px; 
+    left: 0; 
     width: 100%;
-    height: 100%;
 }
 
 .messageBoxContainer {
@@ -130,21 +153,53 @@ body {
 .messageBox {
     padding: 10px;
     border: none;
-    width: calc(100% - 295px);
+    width: calc(100% - 345px);
+    resize: none;
+    height: 35px;
+    vertical-align: middle;
+    outline: none;
+}
+
+.boxMessage {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 10px;
+}
+
+.boxIconContainer {
+    display: inline-flex;
+    vertical-align: middle;
+    background: white;
+    height: 55px;
+}
+
+.boxIcon {
+    vertical-align: middle;
+    font-size: 20px;
+    border: none;
+    background: none;
+    margin-right: 10px;
 }
 
 .sendButton {
+    margin-left: 10px;
     width: 35px;
     height: 35px;
-    margin-left: 10px;
     border: none;
-    background: #0B70FF;
+    background: linear-gradient(307.87deg, #0066FF 8.98%, #45A6FF 93.62%);
     color: white;
     border-radius: 100%;
+    vertical-align: middle;
 }
 
 .bubbleContainer {
     margin-top: 25px;
+}
+
+.bubbleContainer:last-child {
+    margin-bottom: 75px;
 }
 
 .bubblePfp {
@@ -166,10 +221,36 @@ body {
 }
 
 .bubble {
-    background: #007BFF;
+    background: linear-gradient(307.87deg, #0066FF 8.98%, #0085FF 93.62%);
     color: white;
     padding: 5px;
     border-radius: 5px;
     font-weight: normal;
     display: inline-block;
+    word-wrap: break-word;
+    max-width: calc(100% - 255px);
+}
+
+.bubbleMention { 
+    background: linear-gradient(307.87deg, #7000FF 8.98%, #8145FF 93.62%);
+}
+
+.pivotParent {
+    list-style: none;
+    margin: 20px;
+}
+
+.pivotItem{
+    display: inline;
+    padding: 8px 16px;
+    border-radius: 2px;
+}
+
+.pivotItem:not(.pivotSelected):hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.pivotSelected {
+    background: white;
+    color: black;
 }
