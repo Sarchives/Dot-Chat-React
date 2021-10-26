@@ -6,17 +6,17 @@
 
 @font-face {
     font-family: 'Work Sans';
-    src: url('./Fonts/WorkSans-VariableFont_wght.ttf');
+    src: url('./fonts/WorkSans-VariableFont_wght.ttf');
 }
 
 @font-face {
     font-family: 'FluentSystemIcons-Filled';
-    src: url('./Fonts/FluentSystemIcons-Filled.ttf');
+    src: url('./fonts/FluentSystemIcons-Filled.ttf');
 }
 
 @font-face {
     font-family: 'FluentSystemIcons-Regular';
-    src: url('./Fonts/FluentSystemIcons-Regular.ttf');
+    src: url('./fonts/FluentSystemIcons-Regular.ttf');
 }
 
 * {
